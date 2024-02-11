@@ -7,12 +7,7 @@ import banner6 from "../../assest/images/banner6.jpg";
 import banner7 from "../../assest/images/banner7.jpg";
 import banner10 from "../../assest/images/banner-10.jpg";
 import banner11 from "../../assest/images/banner11.jpg";
-import { Container } from "react-bootstrap";
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css';
-import 'swiper/css/pagination';
-import 'swiper/css/navigation';
-import { Autoplay, Pagination, Navigation } from 'swiper/modules';
+import { Container,Button,Carousel } from "react-bootstrap";
 import { useTheme } from "../../themeContext";
 
 
@@ -22,30 +17,115 @@ const SliderComponent = () => {
 
     return (<>
         <Container fluid style={{ backgroundColor: isDarkTheme ? "white" : "black"}} >
-            <Swiper
-                spaceBetween={30}
-                centeredSlides={true}
-                autoplay={{
-                    delay: 5000,
-                    disableOnInteraction: false,
-                }}
-                pagination={{
-                    clickable: true,
-                }}
-                navigation={true}
-                modules={[Autoplay, Pagination, Navigation]}
-                className="mySwiper"
-            >
-                <SwiperSlide><img className="img img-fluid" src={banner1} alt="pic" /></SwiperSlide>
-                <SwiperSlide><img className="img img-fluid" src={banner2} alt="pic" /></SwiperSlide>
-                <SwiperSlide><img className="img img-fluid" src={banner3} alt="pic" /></SwiperSlide>
-                <SwiperSlide><img className="img img-fluid" src={banner4} alt="pic" /></SwiperSlide>
-                <SwiperSlide><img className="img img-fluid" src={banner5} alt="pic" /></SwiperSlide>
-                <SwiperSlide><img className="img img-fluid" src={banner6} alt="pic" /></SwiperSlide>
-                <SwiperSlide><img className="img img-fluid" src={banner7} alt="pic" /></SwiperSlide>
-                <SwiperSlide><img className="img img-fluid" src={banner10} alt="pic" /></SwiperSlide>
-                <SwiperSlide><img className="img img-fluid" src={banner11} alt="pic" /></SwiperSlide>
-            </Swiper>
+        <Carousel data-bs-theme="dark">
+      <Carousel.Item>
+        <img
+          className="d-block w-100"
+          src={banner1}
+          alt="First slide"
+        />
+        <Carousel.Caption className="text-white">
+          <h2>One Piece</h2>
+        <p>Shonen manga, Action manga, Comedy, Fantasy</p>
+        </Carousel.Caption>
+      </Carousel.Item>
+      <Carousel.Item>
+        <img
+          className="d-block w-100"
+          src={banner2}
+          alt="Second slide"
+        />
+        <Carousel.Caption className="text-white">
+          <h2>Demo2 Slayer</h2>
+      <p>Adventure, Dark fantasy, Martial arts</p>
+        </Carousel.Caption>
+      </Carousel.Item>
+      <Carousel.Item>
+        <img
+          className="d-block w-100"
+          src={banner3}
+          alt="Third slide"
+        />
+        <Carousel.Caption className="text-white">
+          <h2>Gintama</h2>
+          <p>
+          Shonen manga, Science fiction comics, Comedy
+          </p>
+        </Carousel.Caption>
+      </Carousel.Item>
+      <Carousel.Item>
+        <img
+          className="d-block w-100"
+          src={banner4}
+          alt="Third slide"
+        />
+        <Carousel.Caption className="text-white">
+          <h2>Attack On Titan</h2>
+          <p>
+          Shonen manga, Dark fantasy, Horror comics          </p>
+        </Carousel.Caption>
+      </Carousel.Item>
+      <Carousel.Item>
+        <img
+          className="d-block w-100"
+          src={banner5}
+          alt="Third slide"
+        />
+        <Carousel.Caption className="text-white">
+          <h2>My Hero Ademedic</h2>
+          <p>
+          Shonen manga, Science fantasy, Comedy          </p>
+        </Carousel.Caption>
+      </Carousel.Item>
+      <Carousel.Item>
+        <img
+          className="d-block w-100"
+          src={banner6}
+          alt="Third slide"
+        />
+        <Carousel.Caption className="text-white">
+          <h2>Jujutsu Kaisen</h2>
+          <p>
+          Adventure, Dark fantasy, Supernatural          </p>
+        </Carousel.Caption>
+      </Carousel.Item>
+      <Carousel.Item>
+        <img
+          className="d-block w-100"
+          src={banner7}
+          alt="Third slide"
+        />
+        <Carousel.Caption className="text-white">
+          <h2>Chain Saw Man</h2>
+          <p>
+          Shonen manga, Dark fantasy          </p>
+        </Carousel.Caption>
+      </Carousel.Item>
+      <Carousel.Item>
+        <img
+          className="d-block w-100"
+          src={banner10}
+          alt="Third slide"
+        />
+        <Carousel.Caption className="text-white">
+          <h2>Haikyuu!!</h2>
+          <p>
+          Drama, Comedy, Biographical, Sports          </p>
+        </Carousel.Caption>
+      </Carousel.Item>
+      <Carousel.Item>
+        <img
+          className="d-block w-100"
+          src={banner11}
+          alt="Third slide"
+        />
+        <Carousel.Caption className="text-white">
+          <h2>Naruto</h2>
+          <p>
+          Action manga, Fantasy          </p>
+        </Carousel.Caption>
+      </Carousel.Item>
+    </Carousel>
 
 
         </Container>

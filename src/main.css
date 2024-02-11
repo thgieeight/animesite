@@ -1,12 +1,4 @@
-.backgroundColor{
-    background-color: red;
-}
-
-
-.bannersize{
-    width: 100%;
-}
-
-.animelist{
-    width: 75%;
-}
+.nav-link:hover {
+    background-color: #007bff; /* Highlight color */
+    color: #fff; /* Text color on hover */
+  }
